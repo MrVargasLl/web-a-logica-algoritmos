@@ -44,5 +44,29 @@ const usuarioBuscado = "Luis";
 
 // Usamos find() para localizar al invitado
 const invitado = invitados.find(persona => persona.nombre === usuarioBuscado);
- console.log(invitado);
- 
+    console.log(invitado);
+
+    //map
+    personajes.map ( char => {
+        console.log(char +'🎅');
+        
+    })
+
+    //filter
+const numeros = [1, 2, 3, 4, 5];
+const pares = numeros.filter(ElementoN => ElementoN % 2 === 0);
+console.log(pares); // Output: [2, 4]
+
+//forEach
+
+const nombres = ['Anita', 'Juanito', 'Pedrito']
+nombres.forEach(nombrecito => {
+    console.log('Hoolaa, ' + nombrecito + "!!!");
+})
+
+//sort
+
+const Numbers = [3, 1, 4, 2]
+
+Numbers.sort((a,b) => (a -b)); // Orden ascendente
+console.log(Numbers);// output: [ ]
