@@ -32,4 +32,17 @@ console.log(frutas);
 // console.log(frutas)
 // frutas = ["moras"]
 
-//pag 18
+
+const invitados = [
+    { nombre: "Ana", disfraz: "Vampiro" },
+    { nombre: "Luis", disfraz: "Pirata" },
+    { nombre: "María", disfraz: "Superhéroe" }
+];
+
+// Nombre que queremos buscar
+const usuarioBuscado = "Luis";
+
+// Usamos find() para localizar al invitado
+const invitado = invitados.find(persona => persona.nombre === usuarioBuscado);
+ console.log(invitado);
+ 
