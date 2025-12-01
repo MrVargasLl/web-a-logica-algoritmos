@@ -4,6 +4,6 @@ import { productos } from "./arregloObjetosMuestra.js";
 
 // Filtrar productos que cuesten menos de $100
 
-const filtrarP = productos.filter(producto => producto.precio < 100);
+export const filtrarP = productos.filter(producto => producto.precio < 100);
 
-console.log(filtrarP);
+//console.log(filtrarP);
