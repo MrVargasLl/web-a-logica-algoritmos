@@ -78,3 +78,108 @@ const nummeros = [30, 5, 20, 10];
 nummeros.sort((a, b) => a - b); // Orden ascendente
 
 console.log(nummeros); // [5, 10, 20, 30]
+
+
+// Ejemplo de objeto: imprimir y agregar materias de un estudiante
+
+/*let estudiante = {
+  nombre: "Ana",
+  calificaciones: [],
+  materias: ["Matemáticas", "Historia", "Ciencias"],
+
+  // Método para agregar una nueva materia
+  agregarMateria: function (materiaNueva) {
+    this.materias.push(materiaNueva);
+  },
+
+  // Método para eliminar una materia por índice
+  eliminarMateria: function (indice) {
+    this.materias.splice(indice, 1);
+  },
+
+  // Método para imprimir las materias
+  mostrarMaterias: function () {
+    console.log("Las materias de " + this.nombre + " son:");
+    this.materias.forEach(m => console.log("- " + m));
+  }
+};
+
+
+// ----------------------
+// PRUEBA DEL OBJETO
+// ----------------------
+
+// Mostrar materias iniciales
+estudiante.mostrarMaterias();
+
+// Agregar materia nueva
+estudiante.agregarMateria("Programación");
+
+// Mostrar materias actualizadas
+estudiante.mostrarMaterias();
+
+// Eliminar una materia (por índice)
+estudiante.eliminarMateria(1);
+
+// Mostrar materias nuevamente
+estudiante.mostrarMaterias();
+
+/*let estudiante = {
+  nombre: "Ana",
+  calificaciones: [],
+  materias: ["Matemáticas", "Historia", "Ciencias"],
+  agregarMateria: (mat) => {
+    return this.materia.push(mat)
+  }
+}*/
+
+
+let estudiante = {
+  nombre: "Ana",
+  calificaciones: [18, 20, 15, 19],
+  materias: ["Matemáticas", "Historia", "Ciencias"],
+
+  // Agregar materia
+  agregarMateria: function(materiaNueva) {
+    this.materias.push(materiaNueva);
+  },
+
+  // Método 1: Imprimir todas las materias
+  imprimirMaterias: function () {
+    console.log("Materias registradas:");
+    this.materias.forEach(m => console.log("- " + m));
+  },
+
+  // Método 2: Sacar promedio de notas
+  promedioNotas: function () {
+  if (this.calificaciones.length === 0) return 0;
+
+  const suma = this.calificaciones.reduce((acc, nota) => acc + nota, 0);
+  return suma / this.calificaciones.length;
+},
+
+  // Método 3: Contar materias registradas
+  contarMaterias: function () {
+    return this.materias.length;
+  },
+
+  // Método 4: Eliminar materia con filter()
+  eliminarMateria: function (materiaAEliminar) {
+    this.materias = this.materias.filter(m => m !== materiaAEliminar);
+  }
+};
+
+
+// ---------------------------
+// EJEMPLOS DE USO
+// ---------------------------
+
+estudiante.imprimirMaterias();
+
+console.log("Promedio:", estudiante.promedioNotas());
+
+console.log("Total de materias:", estudiante.contarMaterias());
+
+estudiante.eliminarMateria("Historia");
+
+estudiante.imprimirMaterias();
